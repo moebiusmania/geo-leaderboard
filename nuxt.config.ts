@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   experimental: {
-    componentIslands: true,
+    // componentIslands: true,
   },
 
   css: ["normalize.css/normalize.css"],

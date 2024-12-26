@@ -7,15 +7,15 @@ interface Reward {
 const rewards: Reward[] = [
   {
     label: "Pantaloni",
-    img: "https://placehold.co/150x150",
+    img: "https://cdn.midjourney.com/cb5b55a5-472d-40cc-bdce-1d0f4dd8d916/0_2.png",
   },
   {
     label: "Giacca",
-    img: "https://placehold.co/150x150",
+    img: "https://cdn.midjourney.com/87bedb9f-781f-4293-b383-12aaeb9e25fb/0_0.png",
   },
   {
     label: "Zaino",
-    img: "https://placehold.co/150x150",
+    img: "https://cdn.midjourney.com/781a45c3-b617-49c8-8de6-e5b5bda030e6/0_1.png",
   },
   {
     label: "T-shirt",
@@ -89,6 +89,9 @@ ul {
       z-index: 1;
       font-size: 1.3rem;
       text-align: center;
+      color: var(--primary);
+      background-color: var(--text);
+      padding: 0 0.4rem;
     }
 
     & img {

@@ -6,6 +6,11 @@ interface Player extends Entry {
   level: number;
 }
 
+const avatars = [
+  "https://cdn.midjourney.com/793e43a4-d703-450f-8172-584d6ef688f5/0_1.png",
+  `https://cdn.midjourney.com/26514a12-132b-464d-87b4-865cc9934d8b/0_3.png`,
+];
+
 // convert milliseconds to minutes and seconds
 const formatTime = (time: number): string => {
   const minutes = Math.floor(time / 60000);
@@ -19,7 +24,7 @@ const getLevel = (score: number): number => {
 
 const players: Player[] = entries.map((entry) => ({
   ...entry,
-  avatar: `https://randomuser.me/api/portraits/lego/1.jpg`,
+  avatar: avatars[Math.floor(Math.random() * avatars.length)],
   level: getLevel(entry.Score),
 }));
 </script>
