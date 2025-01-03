@@ -30,13 +30,23 @@ export default defineEventHandler(async (): Promise<Entry[]> => {
   const results = entries
     .map((entry) =>
       entry
-        .replaceAll("{null},", "")
+        .replaceAll(",{null}", "")
         .replaceAll("{null}", "")
         .replaceAll("'", '"')
     )
     .map((entry) => JSON.parse(entry) as Entry[])
-    .concat(MOCK)
-    .flat();
+    // .concat(MOCK)
+    .flat()
+    .reduce<Entry[]>((acc, entry) => {
+      const existingEntry = acc.find((e) => e.Name === entry.Name);
+      if (existingEntry) {
+        existingEntry.Score += entry.Score;
+      } else {
+        acc.push({ ...entry });
+      }
+      return acc;
+    }, [])
+    .sort((a, b) => b.Score - a.Score);
 
   return results;
 });

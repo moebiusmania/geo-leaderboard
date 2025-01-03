@@ -1,22 +1,10 @@
 <script setup lang="ts">
 const { entries } = defineProps<{ entries: Entry[] }>();
 
-interface Player extends Entry {
-  avatar: string;
-  level: number;
-}
-
 const avatars = [
   "https://cdn.midjourney.com/793e43a4-d703-450f-8172-584d6ef688f5/0_1.png",
   `https://cdn.midjourney.com/26514a12-132b-464d-87b4-865cc9934d8b/0_3.png`,
 ];
-
-// convert milliseconds to minutes and seconds
-const formatTime = (time: number): string => {
-  const minutes = Math.floor(time / 60000);
-  const seconds = ((time % 60000) / 1000).toFixed(0);
-  return `${minutes}:${seconds.padStart(2, "0")}`;
-};
 
 const getLevel = (score: number): number => {
   return Math.floor(score / 20);
@@ -83,6 +71,7 @@ section {
         font-family: var(--title-font);
         font-size: 1.5rem;
         min-width: 100px;
+        width: 200px;
       }
 
       & .score {
