@@ -37,6 +37,13 @@ export default defineEventHandler(async (): Promise<Entry[]> => {
     .map((entry) => JSON.parse(entry) as Entry[])
     // .concat(MOCK)
     .flat()
+    .map((entry) => {
+      const name = entry.Name.toLowerCase();
+      if (name === "edo" || name === "edordo") {
+        entry.Name = "Edoardo";
+      }
+      return entry;
+    })
     .reduce<Entry[]>((acc, entry) => {
       const existingEntry = acc.find((e) => e.Name === entry.Name);
       if (existingEntry) {

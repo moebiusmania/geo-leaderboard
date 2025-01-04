@@ -1,19 +1,25 @@
 <script setup lang="ts">
-const { entries } = defineProps<{ entries: Entry[] }>();
+const { data, season } = defineProps<{ data: Player[]; season: Season }>();
 
 const avatars = [
   "https://cdn.midjourney.com/793e43a4-d703-450f-8172-584d6ef688f5/0_1.png",
   `https://cdn.midjourney.com/26514a12-132b-464d-87b4-865cc9934d8b/0_3.png`,
 ];
 
-const getLevel = (score: number): number => {
-  return Math.floor(score / 20);
+const getProgress = (score: number): number => {
+  return Math.floor((score / season.cap) * 100);
 };
 
-const players: Player[] = entries.map((entry) => ({
-  ...entry,
-  avatar: avatars[Math.floor(Math.random() * avatars.length)],
-  level: getLevel(entry.Score),
+const getLevel = (score: number): number => {
+  if (score === 0) return 0;
+  const progress = getProgress(score);
+  return Math.floor((progress * (season.levels - 1)) / 100) + 1;
+};
+
+const players: Player[] = data.map((player) => ({
+  ...player,
+  avatar: player.gender === "male" ? avatars[1] : avatars[0],
+  level: getLevel(player.Score),
 }));
 </script>
 
@@ -25,7 +31,13 @@ const players: Player[] = entries.map((entry) => ({
         <span class="name">{{ player.Name }}</span>
         <span class="score">{{ player.Score }}xp</span>
         <Ribbon :value="player.level" />
-        <Progress :current="player.level" />
+        <Progress
+          :current="player.level"
+          :score="player.Score"
+          :cap="season.cap"
+          :levels="season.levels"
+          :progress="getProgress(player.Score)"
+        />
       </li>
     </ul>
   </section>

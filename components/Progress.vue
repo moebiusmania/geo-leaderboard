@@ -1,12 +1,13 @@
 <script setup lang="ts">
 const props = defineProps<{
-  levels?: number;
+  levels: number;
   current: number;
+  cap: number;
+  score: number;
+  progress: number;
 }>();
 
-const levels = props.levels || 5;
-const circles = Array.from({ length: levels }, (_, i) => i + 1);
-const progress = (props.current / levels) * 100;
+const circles = Array.from({ length: props.levels }, (_, i) => i + 1);
 </script>
 
 <template>

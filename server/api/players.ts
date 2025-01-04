@@ -14,11 +14,19 @@ const data: Player[] = [
     gender: "female",
   },
   {
-    nickname: "Edordo",
+    nickname: "Edoardo",
     gender: "male",
   },
   {
     nickname: "Geltri",
+    gender: "male",
+  },
+  {
+    nickname: "Asia",
+    gender: "female",
+  },
+  {
+    nickname: "Francesco",
     gender: "male",
   },
 ];

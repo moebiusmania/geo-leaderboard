@@ -1,7 +1,13 @@
+<script setup lang="ts">
+const props = defineProps<{
+  season: Season;
+}>();
+</script>
+
 <template>
   <hgroup>
     <h1>Geografia - Season Pass</h1>
-    <h2>Season 0 - "Winter adventures" 🎄☃️</h2>
+    <h2>Season {{ season.number }} - "{{ season.title }}"</h2>
   </hgroup>
 </template>
 
