@@ -29,7 +29,7 @@ const players: Player[] = data.map((player) => ({
       <li v-for="player in players" :key="player.EntryId">
         <img :src="player.avatar" alt="Player avatar" />
         <span class="name">{{ player.Name }}</span>
-        <span class="score">{{ player.Score }}xp</span>
+        <span class="score">{{ player.Score }}<span>xp</span></span>
         <Ribbon :value="player.level" />
         <Progress
           :current="player.level"
@@ -88,6 +88,11 @@ section {
 
       & .score {
         min-width: 60px;
+        font-family: var(--title-font);
+
+        & span {
+          font-size: 0.9rem;
+        }
       }
     }
   }

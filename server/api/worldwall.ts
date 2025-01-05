@@ -45,7 +45,9 @@ export default defineEventHandler(async (): Promise<Entry[]> => {
       return entry;
     })
     .reduce<Entry[]>((acc, entry) => {
-      const existingEntry = acc.find((e) => e.Name === entry.Name);
+      const existingEntry = acc.find(
+        (e) => e.Name.toLocaleLowerCase() === entry.Name.toLocaleLowerCase()
+      );
       if (existingEntry) {
         existingEntry.Score += entry.Score;
       } else {

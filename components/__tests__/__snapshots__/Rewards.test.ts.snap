@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Rewards > renders properly with rewards list 1`] = `
+"<ul data-v-152e77f7="">
+  <li data-v-152e77f7="" style="animation-delay: 0s;"><img data-v-152e77f7="" src="https://cdn.midjourney.com/cb5b55a5-472d-40cc-bdce-1d0f4dd8d916/0_2.png" alt="Pantaloni"><span data-v-152e77f7="">Lvl 1: Pantaloni</span></li>
+  <li data-v-152e77f7="" style="animation-delay: 0.1s;"><img data-v-152e77f7="" src="https://cdn.midjourney.com/87bedb9f-781f-4293-b383-12aaeb9e25fb/0_0.png" alt="Giacca"><span data-v-152e77f7="">Lvl 2: Giacca</span></li>
+  <li data-v-152e77f7="" style="animation-delay: 0.2s;"><img data-v-152e77f7="" src="https://cdn.midjourney.com/781a45c3-b617-49c8-8de6-e5b5bda030e6/0_1.png" alt="Zaino"><span data-v-152e77f7="">Lvl 3: Zaino</span></li>
+  <li data-v-152e77f7="" style="animation-delay: 0.30000000000000004s;"><img data-v-152e77f7="" src="https://placehold.co/150x150" alt="T-shirt"><span data-v-152e77f7="">Lvl 4: T-shirt</span></li>
+  <li data-v-152e77f7="" style="animation-delay: 0.4s;"><img data-v-152e77f7="" src="https://placehold.co/150x150" alt="Cappello"><span data-v-152e77f7="">Lvl 5: Cappello</span></li>
+</ul>"
+`;

@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Ribbon > renders properly with level value 1`] = `"<span data-v-dc7e820b="" class="ribbon animate__animated animate__jello"> lvl<span data-v-dc7e820b="">3</span></span>"`;

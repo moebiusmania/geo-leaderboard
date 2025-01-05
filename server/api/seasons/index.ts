@@ -9,7 +9,7 @@ export interface Season {
 export const seasons: Season[] = [
   {
     id: "2a423bdf-6c8f-4c3e-a02d-b088c1656d23",
-    cap: 70,
+    cap: 60,
     levels: 5,
     title: "Winter adventures 🎄☃️",
     number: 0,

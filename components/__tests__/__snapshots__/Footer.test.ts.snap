@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer > renders properly with current year 1`] = `
+"<footer data-v-3506faf6="">
+  <p data-v-3506faf6="">2025 - "🌍 Geografia Season Pass" è un progetto sperimentale didattico senza fini di lucro. I sorgenti sono disponibili con licenza MIT su <a data-v-3506faf6="" href="https://github.com/moebiusmania/geo-leaderboard">GitHub</a>. </p>
+</footer>"
+`;

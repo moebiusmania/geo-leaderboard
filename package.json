@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "geo-leaderboard",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,9 +7,12 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest",
+    "test:update": "vitest -u"
   },
   "dependencies": {
+    "@nuxt/test-utils": "^3.15.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "animate.css": "^4.1.1",
     "normalize.css": "^8.0.1",
@@ -18,6 +21,9 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@types/jsdom": "^21.1.7"
+    "@types/jsdom": "^21.1.7",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^15.11.7",
+    "vitest": "^2.1.8"
   }
 }
