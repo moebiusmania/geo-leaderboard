@@ -3,7 +3,7 @@ const { season } = defineProps<{
   season: Season;
 }>();
 
-const { data: entries } = await useFetch<Array<Entry>>("/api/worldwall");
+const { data: entries } = await useFetch<Array<Entry>>("/api/worldwall?season=" + season.number);
 const { data: players } = await useFetch<Array<Player>>("/api/players");
 
 const data = entries.value.map((entry) => ({

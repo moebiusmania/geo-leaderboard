@@ -1,5 +1,5 @@
 import { MOCK } from "../mock/worlwdall";
-
+import { seasons } from "./seasons";
 export interface Entry {
   _type: string;
   EntryId: string;
@@ -10,43 +10,25 @@ export interface Entry {
 
 const API = "https://wordwall.net/leaderboardajax/getentries?";
 
-const ENTRIES = [
-  "activityId=83995871&templateId=22&authorUserId=1049762",
-  "activityId=83996865&templateId=22&authorUserId=1049762",
-  "activityId=83997309&templateId=22&authorUserId=1049762",
-  "activityId=83996997&templateId=22&authorUserId=1049762",
-  "activityId=83997705&templateId=22&authorUserId=1049762",
-  // "activityId=12881761&templateId=5&authorUserId=4744777",
-];
+export default defineEventHandler(async (event): Promise<Entry[]> => {
+  const number = getQuery(event).season as string || "0";
+  const season = seasons[parseInt(number)];
 
-export default defineEventHandler(async (): Promise<Entry[]> => {
   const entries = await Promise.all(
-    ENTRIES.map(async (entry) => {
+    season.homeworks.map(async (entry) => {
       const response = await $fetch(API + entry);
       return response as string;
     })
   );
 
   const results = entries
-    .map((entry) =>
-      entry
-        .replaceAll(",{null}", "")
-        .replaceAll("{null}", "")
-        .replaceAll("'", '"')
-    )
+    .map((entry) => entry.replace(/,?\{null\}|'/g, (match) => match === "'" ? '"' : ''))
     .map((entry) => JSON.parse(entry) as Entry[])
     // .concat(MOCK)
     .flat()
-    .map((entry) => {
-      const name = entry.Name.toLowerCase();
-      if (name === "edo" || name === "edordo") {
-        entry.Name = "Edoardo";
-      }
-      return entry;
-    })
     .reduce<Entry[]>((acc, entry) => {
       const existingEntry = acc.find(
-        (e) => e.Name.toLocaleLowerCase() === entry.Name.toLocaleLowerCase()
+        (e) => e.Name.toLowerCase() === entry.Name.toLowerCase()
       );
       if (existingEntry) {
         existingEntry.Score += entry.Score;

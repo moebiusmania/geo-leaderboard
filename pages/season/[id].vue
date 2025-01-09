@@ -1,7 +1,8 @@
 <script setup lang="ts">
 const { id } = useRoute().params;
+const { data: season } = await useFetch<Season>("/api/seasons/" + id);
 </script>
 
 <template>
-  <h1>Season {{ id }}</h1>
+  <Leaderboard :season="season" />
 </template>
