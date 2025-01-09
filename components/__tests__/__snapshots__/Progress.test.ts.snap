@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Progress > matches snapshot 1`] = `
+"<div data-v-0b11ee78="" class="progress-container">
+  <div data-v-0b11ee78="" class="progress-bar">
+    <div data-v-0b11ee78="" class="progress-fill" style="width: 75%;"></div>
+    <div data-v-0b11ee78="" class="circles">
+      <div data-v-0b11ee78="" class="circle active"></div>
+      <div data-v-0b11ee78="" class="circle active"></div>
+      <div data-v-0b11ee78="" class="circle active"></div>
+      <div data-v-0b11ee78="" class="circle"></div>
+      <div data-v-0b11ee78="" class="circle"></div>
+    </div>
+  </div>
+</div>"
+`;
