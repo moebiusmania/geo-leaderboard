@@ -11,7 +11,7 @@ export interface Player {
 
 export const data: Player[] = [
   {
-    nickname: "SuperPandina",
+    nickname: "alice",
     gender: "female",
   },
   {

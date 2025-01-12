@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Homeworks > renders properly with homework list 1`] = `
+"<section data-v-29ac6caa="" class="paper">
+  <div data-v-29ac6caa="" class="content">
+    <h3 data-v-29ac6caa="">📚 Compiti per casa</h3>
+    <p data-v-29ac6caa=""> Ecco gli esercizi da completare per questa stagione. Completa tutti gli esercizi per ottenere il massimo dei punti! </p>
+    <ul data-v-29ac6caa="">
+      <li data-v-29ac6caa=""><a data-v-29ac6caa="" href="https://example.com/homework1" target="_blank" rel="noopener"> Esercizio 1</a></li>
+      <li data-v-29ac6caa=""><a data-v-29ac6caa="" href="https://example.com/homework2" target="_blank" rel="noopener"> Esercizio 2</a></li>
+      <li data-v-29ac6caa=""><a data-v-29ac6caa="" href="https://example.com/homework3" target="_blank" rel="noopener"> Esercizio 3</a></li>
+    </ul>
+  </div>
+</section>"
+`;

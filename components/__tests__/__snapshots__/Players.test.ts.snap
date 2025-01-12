@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Players > renders properly with players data 1`] = `
+"<section data-v-d41cfe1f="">
+  <ul data-v-d41cfe1f="">
+    <li data-v-d41cfe1f=""><img data-v-d41cfe1f="" src="https://cdn.midjourney.com/26514a12-132b-464d-87b4-865cc9934d8b/0_3.png" alt="Player avatar"><span data-v-d41cfe1f="" class="name">Test Player 1</span><span data-v-d41cfe1f="" class="score">750<span data-v-d41cfe1f="">xp</span></span><span data-v-dc7e820b="" data-v-d41cfe1f="" class="ribbon animate__animated animate__jello"> lvl<span data-v-dc7e820b="">4</span></span>
+      <div data-v-0b11ee78="" data-v-d41cfe1f="" class="progress-container">
+        <div data-v-0b11ee78="" class="progress-bar">
+          <div data-v-0b11ee78="" class="progress-fill" style="width: 75%;"></div>
+          <div data-v-0b11ee78="" class="circles">
+            <div data-v-0b11ee78="" class="circle active"></div>
+            <div data-v-0b11ee78="" class="circle active"></div>
+            <div data-v-0b11ee78="" class="circle active"></div>
+            <div data-v-0b11ee78="" class="circle active"></div>
+            <div data-v-0b11ee78="" class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li data-v-d41cfe1f=""><img data-v-d41cfe1f="" src="https://cdn.midjourney.com/793e43a4-d703-450f-8172-584d6ef688f5/0_1.png" alt="Player avatar"><span data-v-d41cfe1f="" class="name">Test Player 2</span><span data-v-d41cfe1f="" class="score">250<span data-v-d41cfe1f="">xp</span></span><span data-v-dc7e820b="" data-v-d41cfe1f="" class="ribbon animate__animated animate__jello"> lvl<span data-v-dc7e820b="">2</span></span>
+      <div data-v-0b11ee78="" data-v-d41cfe1f="" class="progress-container">
+        <div data-v-0b11ee78="" class="progress-bar">
+          <div data-v-0b11ee78="" class="progress-fill" style="width: 25%;"></div>
+          <div data-v-0b11ee78="" class="circles">
+            <div data-v-0b11ee78="" class="circle active"></div>
+            <div data-v-0b11ee78="" class="circle active"></div>
+            <div data-v-0b11ee78="" class="circle"></div>
+            <div data-v-0b11ee78="" class="circle"></div>
+            <div data-v-0b11ee78="" class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>"
+`;

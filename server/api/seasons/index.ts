@@ -9,6 +9,7 @@ export interface Season {
   start: string;
   end: string;
   homeworks: string[];
+  results: string[];
 }
 
 const DB_ID = process.env.DATABASE_ID || "";
@@ -25,6 +26,7 @@ export default defineEventHandler(async (): Promise<Season[]> => {
     start: doc.start,
     end: doc.end,
     homeworks: doc.homeworks,
+    results: doc.results,
   }));
   return data;
 });

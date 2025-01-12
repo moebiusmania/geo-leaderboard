@@ -15,7 +15,7 @@ export default defineEventHandler(async (event): Promise<Entry[]> => {
   const season = seasons[parseInt(number)];
 
   const entries = await Promise.all(
-    season.homeworks.map(async (entry) => {
+    season.results.map(async (entry) => {
       const response = await $fetch(API + entry);
       return response as string;
     })

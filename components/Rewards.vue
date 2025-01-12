@@ -1,31 +1,7 @@
 <script setup lang="ts">
-interface Reward {
-  label: string;
-  img: string;
-}
-
-const rewards: Reward[] = [
-  {
-    label: "Pantaloni",
-    img: "https://cdn.midjourney.com/cb5b55a5-472d-40cc-bdce-1d0f4dd8d916/0_2.png",
-  },
-  {
-    label: "Giacca",
-    img: "https://cdn.midjourney.com/87bedb9f-781f-4293-b383-12aaeb9e25fb/0_0.png",
-  },
-  {
-    label: "Zaino",
-    img: "https://cdn.midjourney.com/781a45c3-b617-49c8-8de6-e5b5bda030e6/0_1.png",
-  },
-  {
-    label: "T-shirt",
-    img: "https://placehold.co/150x150",
-  },
-  {
-    label: "Cappello",
-    img: "https://placehold.co/150x150",
-  },
-];
+const { data: rewards } = defineProps<{
+  data: Array<Reward>;
+}>();
 </script>
 
 <template>
@@ -35,7 +11,10 @@ const rewards: Reward[] = [
       :key="reward.label"
       :style="{ animationDelay: `${index * 0.1}s` }"
     >
-      <img :src="reward.img" :alt="reward.label" />
+      <img
+        :src="reward.img || 'https://placehold.co/150x150'"
+        :alt="reward.label"
+      />
       <span>Lvl {{ index + 1 }}: {{ reward.label }}</span>
     </li>
   </ul>
