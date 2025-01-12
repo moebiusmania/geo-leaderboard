@@ -1,5 +1,4 @@
 import { MOCK } from "../mock/worlwdall";
-import { seasons } from "./seasons";
 export interface Entry {
   _type: string;
   EntryId: string;
@@ -11,7 +10,8 @@ export interface Entry {
 const API = "https://wordwall.net/leaderboardajax/getentries?";
 
 export default defineEventHandler(async (event): Promise<Entry[]> => {
-  const number = getQuery(event).season as string || "0";
+  const seasons = await $fetch("/api/seasons");
+  const number = (getQuery(event).season as string) || "0";
   const season = seasons[parseInt(number)];
 
   const entries = await Promise.all(
@@ -22,7 +22,9 @@ export default defineEventHandler(async (event): Promise<Entry[]> => {
   );
 
   const results = entries
-    .map((entry) => entry.replace(/,?\{null\}|'/g, (match) => match === "'" ? '"' : ''))
+    .map((entry) =>
+      entry.replace(/,?\{null\}|'/g, (match) => (match === "'" ? '"' : ""))
+    )
     .map((entry) => JSON.parse(entry) as Entry[])
     // .concat(MOCK)
     .flat()

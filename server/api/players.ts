@@ -41,31 +41,7 @@ export const data: Player[] = [
     aliases: ["lorenzo bomba", "loreno", "ciccio lorenzo", "mi chiamo lorenzo"],
   },
   {
-    nickname: "ciccio lorenzo",
-    gender: "male",
-  },
-  {
-    nickname: "lorenzo bomba",
-    gender: "male",
-  },
-  {
-    nickname: "loreno",
-    gender: "male",
-  },
-  {
-    nickname: "mi chiamo lorenzo",
-    gender: "male",
-  },
-  {
-    nickname: "lorenzo boss",
-    gender: "male",
-  },
-  {
-    nickname: "lorenzo bomba 281214",
-    gender: "male",
-  },
-  {
-    nickname: "lollo",
+    nickname: "riccardo",
     gender: "male",
   },
 ];
