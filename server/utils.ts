@@ -1,5 +1,5 @@
 import { Query } from "appwrite";
-import { H3Event } from "h3";
+import { H3Event, getRouterParam, createError } from "h3";
 import { databases } from "~/utils/appwrite";
 
 const DB_ID = process.env.DATABASE_ID || "";
