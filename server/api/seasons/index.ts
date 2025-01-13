@@ -8,7 +8,6 @@ export interface Season {
   number: number;
   start: string;
   end: string;
-  homeworks: string[];
   results: string[];
 }
 
@@ -25,7 +24,6 @@ export default defineEventHandler(async (): Promise<Season[]> => {
     number: doc.number,
     start: doc.start,
     end: doc.end,
-    homeworks: doc.homeworks,
     results: doc.results,
   }));
   return data;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: homeworks } = defineProps<{
-  data: Array<string>;
+  data: Array<Homework>;
 }>();
 </script>
 
@@ -14,8 +14,8 @@ const { data: homeworks } = defineProps<{
       </p>
       <ul>
         <li v-for="(homework, index) in homeworks" :key="index">
-          <a :href="homework" target="_blank" rel="noopener">
-            Esercizio {{ index + 1 }}
+          <a :href="homework.url" target="_blank" rel="noopener">
+            {{ homework.label }}
           </a>
         </li>
       </ul>

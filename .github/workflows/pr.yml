@@ -1,7 +1,7 @@
-name: Run the tests
+name: Check the PR
 
 on:
-  push:
+  pull_request:
     branches: [main]
 
 jobs:

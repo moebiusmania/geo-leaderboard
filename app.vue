@@ -1,6 +1,9 @@
 <script setup lang="ts">
 useHead({
   title: "Geografia - Season Pass",
+  htmlAttrs: {
+    lang: "it",
+  },
   meta: [
     {
       name: "description",
@@ -25,6 +28,7 @@ useHead({
 
 <style>
 :root {
+  --white: #eeeeee;
   --background: #f4f1de;
   --text: #3d405b;
   --primary: #e07a5f;

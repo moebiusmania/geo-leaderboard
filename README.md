@@ -8,10 +8,10 @@ Experimental educational project without profit purposes to test the effectivene
 
 ## Built with
 
-- Nuxt 3
-- Typescript
-- vanilla CSS
-- Appwrite Cloud
+- **[Nuxt 3](https://nuxt.com/)** as the main framework
+- **[Typescript](https://www.typescriptlang.org/)** for the backend API
+- **[vanilla CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)** for the frontend styling
+- **[Appwrite Cloud](https://appwrite.io/)** for the database and authentication
 
 the `Bangers` font is provided by [Google Fonts](https://fonts.google.com/specimen/Bangers).
 
