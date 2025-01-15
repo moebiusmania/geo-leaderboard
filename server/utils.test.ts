@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { databases } from "~/utils/appwrite";
-import { getDocuments, getSeasonParam } from "../utils";
+import { getDocuments, getSeasonParam } from "./utils";
 import { H3Event } from "h3";
 
 // Mock the external dependencies
