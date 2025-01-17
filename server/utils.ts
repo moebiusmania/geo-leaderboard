@@ -17,7 +17,7 @@ export const getDocuments = async (collectionId: string, index: number) =>
   ]);
 
 export const getSeasonParam = (event: H3Event) => {
-  const season = getRouterParam(event, "season");
+  const season = getRouterParam(event, "number");
   const index = parseInt(season || "0");
   if (index < 0) {
     throwError(400, "Season must be greater than 0");

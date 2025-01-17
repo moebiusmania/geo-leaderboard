@@ -52,12 +52,15 @@ In Appwrite there are two "teams" of users that define the roles and permissions
 - `player`, who can setup their profile and answer the questions -->
 
 ## API reference
+
 This application consume and expose the following APIs
 
-| Endpoint               | Methods | Description           |
-| ---------------------- | ------- | --------------------- |
-| `/api/seasons`         | GET     | Get all seasons       |
-| `/api/seasons/:number` | GET     | Get a specific season |
+| Endpoint                         | Methods | Description                            |
+| -------------------------------- | ------- | -------------------------------------- |
+| `/api/seasons`                   | GET     | Get all seasons                        |
+| `/api/seasons/:number`           | GET     | Handle a specific season               |
+| `/api/seasons/:number/rewards`   | GET     | Handle rewards for a specific season   |
+| `/api/seasons/:number/homeworks` | GET     | Handle homeworks for a specific season |
 
 ## License
 
