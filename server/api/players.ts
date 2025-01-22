@@ -1,3 +1,5 @@
+import { getDocuments, getSeasonParam } from "~/server/utils";
+
 export interface Player {
   aliases?: string[];
   avatar?: string;
@@ -9,43 +11,21 @@ export interface Player {
   score?: number;
 }
 
-export const data: Player[] = [
-  {
-    nickname: "alice",
-    gender: "female",
-  },
-  {
-    nickname: "edoardo",
-    aliases: ["edo", "edordo"],
-    gender: "male",
-  },
-  {
-    nickname: "geltri",
-    gender: "male",
-  },
-  {
-    nickname: "asia",
-    gender: "female",
-  },
-  {
-    nickname: "francesco",
-    gender: "male",
-  },
-  {
-    nickname: "pablo",
-    gender: "male",
-  },
-  {
-    nickname: "lorenzo",
-    gender: "male",
-    aliases: ["lorenzo bomba", "loreno", "ciccio lorenzo", "mi chiamo lorenzo"],
-  },
-  {
-    nickname: "riccardo",
-    gender: "male",
-  },
-];
+const PLAYERS_ID = process.env.PLAYERS_COLLECTION_ID || "";
 
-export default defineEventHandler(async (): Promise<Player[]> => {
+export default defineEventHandler(async (event): Promise<Player[]> => {
+  const index = getSeasonParam(event);
+
+  const players = await getDocuments(PLAYERS_ID, index);
+
+  const data =
+    players.documents.length > 0
+      ? players.documents
+          .map((doc) => ({
+            gender: doc.gender,
+            nickname: doc.nickname,
+          }))
+      : [];
+
   return data;
 });
