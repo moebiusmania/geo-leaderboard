@@ -3,9 +3,8 @@
 exports[`Hero > renders properly with season data 1`] = `
 "<header data-v-30b0ac3d="">
   <hgroup data-v-30b0ac3d="">
-    <h1 data-v-30b0ac3d="">Geografia - Season Pass</h1>
     <h2 data-v-30b0ac3d="">Season 1 - "Test Season"</h2>
   </hgroup><!-- display the current season start date and end date formatted as dd/mm/yyyy -->
-  <p data-v-30b0ac3d=""><span data-v-30b0ac3d="">Invalid Date</span><span data-v-30b0ac3d="">-</span><span data-v-30b0ac3d="">Invalid Date</span></p>
+  <p data-v-30b0ac3d=""><span data-v-30b0ac3d="">01 gennaio</span><span data-v-30b0ac3d="">-</span><span data-v-30b0ac3d="">31 gennaio</span></p>
 </header>"
 `;

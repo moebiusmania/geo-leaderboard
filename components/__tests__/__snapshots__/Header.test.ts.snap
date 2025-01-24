@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header > renders properly 1`] = `
+"<nav data-v-a81738bd="">
+  <h1 data-v-a81738bd="">Geografia - Season Pass</h1>
+</nav>"
+`;

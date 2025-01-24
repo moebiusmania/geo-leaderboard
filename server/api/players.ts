@@ -1,4 +1,4 @@
-import { getDocuments, getSeasonParam } from "~/server/utils";
+import { databases } from "~/utils/appwrite";
 
 export interface Player {
   aliases?: string[];
@@ -12,19 +12,17 @@ export interface Player {
 }
 
 const PLAYERS_ID = process.env.PLAYERS_COLLECTION_ID || "";
+const DB_ID = process.env.DATABASE_ID || "";
 
-export default defineEventHandler(async (event): Promise<Player[]> => {
-  const index = getSeasonParam(event);
-
-  const players = await getDocuments(PLAYERS_ID, index);
+export default defineEventHandler(async (): Promise<Player[]> => {
+  const players = await databases.listDocuments(DB_ID, PLAYERS_ID);
 
   const data =
     players.documents.length > 0
-      ? players.documents
-          .map((doc) => ({
-            gender: doc.gender,
-            nickname: doc.nickname,
-          }))
+      ? players.documents.map((doc) => ({
+          gender: doc.gender,
+          nickname: doc.nickname,
+        }))
       : [];
 
   return data;
