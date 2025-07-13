@@ -1,4 +1,4 @@
-import { getDocuments, getSeasonParam } from "~/server/utils";
+import { getDocuments, getSeasonParam } from "../../../utils";
 
 export interface Reward {
   label: string;

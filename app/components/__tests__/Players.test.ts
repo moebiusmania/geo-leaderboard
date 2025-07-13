@@ -63,7 +63,11 @@ describe("Players", () => {
     });
 
     // Test progress calculation (750/1000 * 100 = 75%)
-    const firstPlayer = wrapper.findAll("li")[0];
+    const playerItems = wrapper.findAll("li");
+    expect(playerItems).toHaveLength(2);
+
+    const firstPlayer = playerItems[0]!;
+
     const progress = firstPlayer.findComponent({ name: "Progress" });
     expect(progress.props("progress")).toBe(75);
 

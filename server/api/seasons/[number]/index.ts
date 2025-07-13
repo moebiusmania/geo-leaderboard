@@ -1,5 +1,5 @@
-import { throwError } from "~/server/utils";
-import { type Season } from "./../index";
+import { throwError } from "../../../utils";
+import { type Season } from "../index";
 
 export default defineEventHandler(async (event): Promise<Season> => {
   const seasons = await $fetch("/api/seasons");
